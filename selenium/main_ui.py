@@ -188,8 +188,8 @@ class Ui_MainWindow(object):
         
     def on_pushButton_2_clicked(self):
     
-        review_croll = reviewCrollOne(self)
-        review_croll.reviewCrollOne()
+        review_crawl = reviewCrawlOne(self)
+        review_crawl.reviewCrawlOne()
     def add_line_edit(self):
         if self.counter < 12:  # (3*4) line edits
             column = self.counter // 4
@@ -225,12 +225,12 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "입력창 추가"))
         self.pushButton_4.setText(_translate("MainWindow", "Following"))
 
-class reviewCrollOne():
+class reviewCrawlOne():
     def __init__(self, main_window):
         self.main_window = main_window
 
 
-    def reviewCrollOne(self):
+    def reviewCrawlOne(self):
 
         #원하는 회사의 리뷰 페이지까지 이동
         company = driver.find_element_by_css_selector("input#search_bar_search_query")
@@ -350,7 +350,7 @@ class reviewCrollOne():
         # step10.크롬 드라이버 종료
         driver.quit()
     
-class reviewCrollMore():
+class reviewCrawlMore():
     query = []
     # lineEdit_1부터 lineEdit_12까지 반복하여 값 저장
     
